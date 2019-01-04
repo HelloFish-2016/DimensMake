@@ -1,7 +1,10 @@
 package com.mango.dimen;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.mango.dimen.dp.DimenDPThread;
+import com.mango.dimen.px.DimenPXThread;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,9 +16,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static void main(String[] args){
 
-        String path = "D:\\ASWorkSpace\\DimensMake\\app\\src\\main\\res\\";
-        DimenThread thread = new DimenThread();
-        thread.setPath(path);
-        new Thread(thread).start();
+        String pathPX = "E:\\values-px\\";
+        DimenPXThread threadPX = new DimenPXThread();
+        threadPX.setPath(pathPX);
+        new Thread(threadPX).start();
+
+        String pathDP = "E:\\values-dp\\";
+        DimenDPThread threadDP = new DimenDPThread();
+        threadDP.setPath(pathDP);
+        new Thread(threadDP).start();
+
     }
 }
