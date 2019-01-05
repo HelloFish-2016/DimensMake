@@ -25,7 +25,7 @@ dependencies {
 }
 ```
 
-* 在工程中任何一个类添加如下代码
+* 在工程中任何一个类添加如下代码，然后右键运行main方法即可
 
 ```Java
     public static void main(String[] args){
