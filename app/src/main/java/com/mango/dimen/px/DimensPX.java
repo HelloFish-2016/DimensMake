@@ -10,15 +10,10 @@ public class DimensPX {
     private int xPX;
     private int yPX;
 
-    private int xBase;
-    private int yBase;
-
-    public DimensPX(int xPX, int yPX, int xBase, int yBase) {
+    public DimensPX(int xPX, int yPX) {
         super();
         this.xPX = xPX;
         this.yPX = yPX;
-        this.xBase = xBase;
-        this.yBase = yBase;
     }
 
     public int getxPX() {
@@ -32,18 +27,6 @@ public class DimensPX {
     }
     public void setyPX(int yPX) {
         this.yPX = yPX;
-    }
-    public int getxBase() {
-        return xBase;
-    }
-    public void setxBase(int xBase) {
-        this.xBase = xBase;
-    }
-    public int getyBase() {
-        return yBase;
-    }
-    public void setyBase(int yBase) {
-        this.yBase = yBase;
     }
 
 }

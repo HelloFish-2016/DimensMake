@@ -9,12 +9,9 @@ package com.mango.dimen.dp;
 public class DimensDP {
     private int swDp;
 
-    private int wBaseDp;
-
-    public DimensDP(int swDp, int xBaseDp) {
+    public DimensDP(int swDp) {
         super();
         this.swDp = swDp;
-        this.wBaseDp = xBaseDp;
     }
 
     public int getSwDp() {
@@ -23,13 +20,5 @@ public class DimensDP {
 
     public void setSwDp(int swDp) {
         this.swDp = swDp;
-    }
-
-    public int getwBaseDp() {
-        return wBaseDp;
-    }
-
-    public void setwBaseDp(int wBaseDp) {
-        this.wBaseDp = wBaseDp;
     }
 }

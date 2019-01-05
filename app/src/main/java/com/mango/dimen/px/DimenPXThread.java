@@ -16,29 +16,31 @@ import java.util.List;
  */
 public class DimenPXThread implements Runnable{
 
-    private String path = "";
+    private String path ;
+    private int baseWidth;
+    private int baseHeight ;
     private static List<DimensPX> dimensData = new ArrayList<>();
 
     static{
-        dimensData.add(new DimensPX(480,800,720,1280));
-        dimensData.add(new DimensPX(480,854,720,1280));
-        dimensData.add(new DimensPX(540,960,720,1280));
-        dimensData.add(new DimensPX(600,1024,720,1280));
-        dimensData.add(new DimensPX(768,1024,720,1280));
-        dimensData.add(new DimensPX(720,1184,720,1280));
-        dimensData.add(new DimensPX(720,1196,720,1280));
-        dimensData.add(new DimensPX(720,1280,720,1280));
-        dimensData.add(new DimensPX(768,1280,720,1280));
-        dimensData.add(new DimensPX(800,1280,720,1280));
-        dimensData.add(new DimensPX(1080,1776,720,1280));
-        dimensData.add(new DimensPX(1080,1794,720,1280));
-        dimensData.add(new DimensPX(1080,1812,720,1280));
-        dimensData.add(new DimensPX(1080,1920,720,1280));
-        dimensData.add(new DimensPX(1200,1920,720,1280));
-        dimensData.add(new DimensPX(1080,2016,720,1280));
-        dimensData.add(new DimensPX(1080,2040,720,1280));
-        dimensData.add(new DimensPX(1080,2160,720,1280));
-        dimensData.add(new DimensPX(1440,2560,720,1280));
+        dimensData.add(new DimensPX(480,800));
+        dimensData.add(new DimensPX(480,854));
+        dimensData.add(new DimensPX(540,960));
+        dimensData.add(new DimensPX(600,1024));
+        dimensData.add(new DimensPX(768,1024));
+        dimensData.add(new DimensPX(720,1184));
+        dimensData.add(new DimensPX(720,1196));
+        dimensData.add(new DimensPX(720,1280));
+        dimensData.add(new DimensPX(768,1280));
+        dimensData.add(new DimensPX(800,1280));
+        dimensData.add(new DimensPX(1080,1776));
+        dimensData.add(new DimensPX(1080,1794));
+        dimensData.add(new DimensPX(1080,1812));
+        dimensData.add(new DimensPX(1080,1920));
+        dimensData.add(new DimensPX(1200,1920));
+        dimensData.add(new DimensPX(1080,2016));
+        dimensData.add(new DimensPX(1080,2040));
+        dimensData.add(new DimensPX(1080,2160));
+        dimensData.add(new DimensPX(1440,2560));
 
     }
 
@@ -46,10 +48,13 @@ public class DimenPXThread implements Runnable{
         this.path = path;
     }
 
+    public void setBasePX(int baseWidth,int baseHeight){
+        this.baseWidth = baseWidth;
+        this.baseHeight = baseHeight;
+    }
+
     @Override
     public void run() {
-
-        if("".equals(path)) return;
 
         StringBuffer sb = new StringBuffer();
         for(int i=0; i<dimensData.size(); i++){
@@ -89,9 +94,9 @@ public class DimenPXThread implements Runnable{
 
             int bound;
             if("x".equals(type)){
-                bound = dimens.getxBase();
+                bound = baseWidth;
             }else{
-                bound = dimens.getyBase();
+                bound = baseHeight;
             }
 
             for(int k=1; k<bound+1; k++){
@@ -101,9 +106,9 @@ public class DimenPXThread implements Runnable{
 
                 float px = 0.0f;
                 if("x".equals(type)){
-                    px = ((float)dimens.getxPX()/dimens.getxBase()) * k;
+                    px = ((float)dimens.getxPX()/baseWidth) * k;
                 }else{
-                    px = ((float)dimens.getyPX()/dimens.getyBase()) * k;
+                    px = ((float)dimens.getyPX()/baseHeight) * k;
                 }
 
                 sb.append(px+"px</dimen>" + "\n");
