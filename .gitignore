@@ -6,7 +6,6 @@
 /.idea/libraries
 /app/build
 /app/src/test
-/app/src/androidTest
 .DS_Store
 /build
 /captures
