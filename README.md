@@ -21,7 +21,7 @@ allprojects {
 
 ```Gradle
 dependencies {
-  compile 'com.github.Mangosir:MangoPermission:v1.0.0-mango'
+  compile 'com.github.Mangosir:DimensMake:v1.0.0'
 }
 ```
 
