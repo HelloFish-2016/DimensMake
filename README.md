@@ -4,6 +4,27 @@
 使用者只需要设置基准分辨率或者最小宽度基准值，文件存放目录即可
 文件生成后拷贝到对应的工程res目录下
 
+使用方法
+
+* 在项目根目录下的build.gradle文件中添加如下代码
+
+```Gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+* 在moudle下的build.gradle文件添加如下依赖
+
+```Gradle
+dependencies {
+  compile 'com.github.Mangosir:MangoPermission:v1.0.0-mango'
+}
+```
+
 # 屏幕适配方案
 
 ## 屏幕分辨率限定符
