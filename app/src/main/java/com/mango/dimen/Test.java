@@ -1,18 +1,15 @@
 package com.mango.dimen;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
 import com.mango.dimen.dp.DimenDPThread;
 import com.mango.dimen.px.DimenPXThread;
 
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+/**
+ * Author: Mangoer
+ * Time: 2019/1/5 11:45
+ * Version:
+ * Desc: TODO()
+ */
+public class Test {
 
     public static void main(String[] args){
 
