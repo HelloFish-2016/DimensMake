@@ -9,7 +9,7 @@ import com.mango.dimen.px.DimenPXThread;
  * Version:
  * Desc: TODO(屏幕适配方案)
  */
-public class Build {
+public class DimensBuild {
 
     /**
      * 生成分辨率限定符dimens文件
