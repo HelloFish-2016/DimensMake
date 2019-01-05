@@ -4,7 +4,7 @@
 使用者只需要设置基准分辨率或者最小宽度基准值，文件存放目录即可
 文件生成后拷贝到对应的工程res目录下
 
-使用方法
+使用步骤
 
 * 在项目根目录下的build.gradle文件中添加如下代码
 
@@ -23,6 +23,19 @@ allprojects {
 dependencies {
   compile 'com.github.Mangosir:DimensMake:1.0.2-dimens'
 }
+```
+
+* 在工程中任何一个类添加如下代码
+
+```Java
+    public static void main(String[] args){
+
+        //下面两种方法任选其一
+        DimensBuild.buildDP();
+        
+        DimensBuild.buildPX();
+
+    }
 ```
 
 # 屏幕适配方案
